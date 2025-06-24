@@ -15,3 +15,6 @@ class MessageResponse(BaseModel):
 class TokenResponse(BaseModel):
     msg: str
     token: str
+
+class UserEmail(BaseModel):
+    email: EmailStr

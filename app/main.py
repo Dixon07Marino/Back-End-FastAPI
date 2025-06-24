@@ -5,7 +5,7 @@ from app.api import auth ,users_crud, users_images
 #Instancia de FastAPI
 app = FastAPI(title="Back-End - FastAPI",
             version="1.0.0",
-            summary="API con sistema de Auth y JWT, además cifrado de contraseña - CRUD de Usuarios (Sin create)")
+            summary="API con sistema de Auth y JWT, además cifrado de contraseña - CRUD de Usuarios (Sin create) - Servir archivos estaticos (Solo imagenes por ahora)")
 
 app.mount("/static_files", StaticFiles(directory="static_files"), name="images")
 

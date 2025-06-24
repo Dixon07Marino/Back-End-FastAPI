@@ -7,4 +7,4 @@ router = APIRouter()
 @router.get("/{id_img}")
 async def get_img_user(id_img: int):
     img_path = get_img(id_img)
-    return FileResponse(img_path, media_type="image/png")
+    return FileResponse(img_path)

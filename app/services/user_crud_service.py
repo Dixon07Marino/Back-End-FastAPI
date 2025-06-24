@@ -7,7 +7,7 @@ def validate_user_existance(data):
         raise HTTPException(status_code=404, detail="El Usuario no existe")
     return data
 
-def extract_data_to_update(id_user: int, data: dict):
+def extract_data_to_update(id_user: int, data: dict) -> tuple[list, list]:
 
     if not data:
         raise HTTPException(status_code=400, detail="No hay datos para actualizar")

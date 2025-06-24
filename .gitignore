@@ -5,3 +5,5 @@ __pycache__/
 request-api.py
 
 .vscode/
+
+.mypy_cache/

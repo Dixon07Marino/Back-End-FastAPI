@@ -32,7 +32,7 @@ def get_all_users() -> dict:
         raise Exception(f"No hay usuarios disponibles: {e}")
 
 #Obtener usuario por id
-def get_user_by_id(id_user: int):
+def get_user_by_id(id_user: int) -> dict:
     try:
         with connect_db() as conn:
             with conn.cursor(dictionary=True) as cursor:
@@ -42,7 +42,7 @@ def get_user_by_id(id_user: int):
         raise Exception(f"Error interno en la bd: {e}")
 
 #Actualizar usuario por id
-def update_user_by_id(fields: list[str], values: list[str, int]):
+def update_user_by_id(fields: list, values: list) -> dict:
     try:
         with connect_db() as conn:
             with conn.cursor() as cursor:
@@ -55,7 +55,7 @@ def update_user_by_id(fields: list[str], values: list[str, int]):
         raise Exception(f"Error interno en la bd: {e}")
 
 #Eliminar usuario por id
-def delete_user_by_id(id_user: int):
+def delete_user_by_id(id_user: int) -> dict:
     try:
         with connect_db() as conn:
             with conn.cursor() as cursor:
